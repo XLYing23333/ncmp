@@ -6,6 +6,9 @@ from src.utils.logger import Logger
 from src.utils.notification import NotificationService
 from src.validators.cookie import CookieValidator
 
+import time
+import random
+
 
 def main():
     try:
@@ -58,5 +61,14 @@ def main():
         except Exception as notify_error:
             logger.error(f"发送异常通知时出错: {str(notify_error)}")
 
+def delay():
+    # 随机等待 0~600 秒
+    wait_seconds = random.randint(0, 60)
+    print(f"随机等待 {wait_seconds} 分钟")
+    wait_min = wait_seconds * 60
+    time.sleep(wait_min)
+    print("正式开始任务")
+
 if __name__ == "__main__":
+    delay()
     main()
