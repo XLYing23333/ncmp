@@ -76,6 +76,10 @@ class Signer:
             score = "3" if has_english else "2"
         elif score_strategy == 3:  # 3-4分策略（默认）
             score = "4" if has_english else "3"
+            if score=="4" and random.randint(0, 1) == 1:
+                score="5"
+            if score=="3" and random.randint(0, 1) == 1:
+                score="2"
         else:  # 固定4分
             score = "4"
             
