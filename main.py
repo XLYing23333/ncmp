@@ -62,7 +62,11 @@ def main():
             logger.error(f"发送异常通知时出错: {str(notify_error)}")
 
 def delay():
+    config = Config()
     logger = Logger()
+    if config.get("WAIT_USER") == False:
+        logger.info("**已经跳过自动延时**")
+        return pass
     wait_seconds = random.randint(0, 60)
     logger.info(f"============= 随机等待 {wait_seconds} 分钟 =============")
     wait_min = wait_seconds * 60
