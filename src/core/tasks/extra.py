@@ -37,6 +37,7 @@ class ExtraTask:
                 return
 
             self.logger.info(f"发现 {len(extra_tasks)} 个待额外评定任务")
+            self.logger.info(f"将仅完成 {total_tasks} 个待额外评定任务")
             
             # 记录本次成功评分的数量
             success_count = 0
