@@ -94,6 +94,7 @@ class Config:
         config.setdefault("smtp_port", 465)
         config.setdefault("score", 3)
         config.setdefault("full_extra_tasks", False)
+        config.setdefault("WAIT_USER", True)
 
     def get(self, key: str, default: Any = None) -> Any:
         """获取配置项"""
