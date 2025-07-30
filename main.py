@@ -66,7 +66,7 @@ def delay():
     logger = Logger()
     if config.get("WAIT_USER") == False:
         logger.info("**已经跳过自动延时**")
-        return pass
+        return True
     wait_seconds = random.randint(0, 60)
     logger.info(f"============= 随机等待 {wait_seconds} 分钟 =============")
     wait_min = wait_seconds * 60
