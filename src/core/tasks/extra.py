@@ -25,7 +25,7 @@ class ExtraTask:
             total_tasks = (7 if not self.config.get('full_extra_tasks', False) else len(extra_tasks) + completed_count)
 
             # Random Decrease TASK Count
-            total_task -= random.randint(1, 3)
+            total_tasks -= random.randint(1, 3)
             
             # 如果已经完成任务，直接返回
             if completed_count >= total_tasks:
