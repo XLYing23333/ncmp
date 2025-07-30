@@ -34,4 +34,5 @@ jobs:
         WAIT_TIME_MAX: ${{ secrets.WAIT_TIME_MAX }}
         SCORE: ${{ secrets.SCORE }}
         FULL_EXTRA_TASKS: ${{ secrets.FULL_EXTRA_TASKS }}
+        WAIT_USER: ${{ secrets.WAIT_USER }}
       run: python main.py 
