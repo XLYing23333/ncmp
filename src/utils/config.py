@@ -55,6 +55,10 @@ class Config:
             config["gh_token"] = gh_token
         if gh_repo := os.getenv("GH_REPO"):
             config["gh_repo"] = gh_repo
+       
+        # WAIT_USER
+        if WAIT_USER := os.getenv("WAIT_USER"):
+            config["WAIT_USER"] = WAIT_USER
             
         config.setdefault("wait_time_min", 15)
         config.setdefault("wait_time_max", 20)
